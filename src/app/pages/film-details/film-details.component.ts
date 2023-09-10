@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { ApiService } from 'src/app/shared';
-import { FilmModel } from 'src/app/shared/models/film';
+import { ApiService, FilmModel } from '../../shared';
 
 @Component({
   selector: 'app-film-details',

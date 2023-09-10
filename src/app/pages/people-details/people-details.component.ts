@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { ApiService, PeopleModel } from 'src/app/shared';
+import { ApiService, PeopleModel, FilmModel } from '../../shared';
+
 
 @Component({
   selector: 'app-people-details',

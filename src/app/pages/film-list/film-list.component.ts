@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ApiService } from 'src/app/shared';
+import { ApiService, FilmModel } from '../../shared';
+
 
 @Component({
   selector: 'app-film-list',

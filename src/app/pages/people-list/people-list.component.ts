@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { PeopleModel } from 'src/app/shared';
-import { ApiService } from 'src/app/shared/api.service';
+import { ApiService, PeopleModel, FilmModel } from '../../shared';
 
 @Component({
   selector: 'app-people-list',
