@@ -1,0 +1,46 @@
+<div class="padding-top-60 container" style="display: flex">
+    <div style="width: 25%"  *ngIf="movie">
+      <mat-card class="actor-card">
+        <img
+            class="poster__image"
+            loading="lazy"
+            [src]="'../../../assets/images/' + getPosterPath(movie.posterPath)"
+            [alt]="movie.title"            
+          />
+      </mat-card>
+    </div>
+  
+    <div style="width: 70%" *ngIf="movie">
+      <mat-card class="actor-card-bio" style="width: 100%; margin-bottom: 0">
+        <mat-card-content>
+          <h2>Movie Info</h2>
+          <p>
+            <strong>Title: </strong>
+            <span>{{ movie.title }}</span>
+          </p>
+          <p>
+            <strong>Episode Id: </strong>
+            <span>{{ movie.episodeId }}</span>
+          </p>
+          <p>
+            <strong>Producer: </strong>
+            <span>{{ movie.producer }}</span>
+          </p>
+          <p>
+            <strong>Director: </strong>
+            <span>{{ movie.director }}</span>
+          </p>
+          <p>
+              <strong>Description: </strong> {{ movie.openingCrawl }}
+          </p>
+          <p>
+              <strong>Characters: </strong>
+              <span>
+                  <app-tag [isMovie]="false" [tags]="tags | async"></app-tag>
+              </span> 
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

@@ -1,0 +1,35 @@
+<section class="home-main-content">Welcome DSV</section>
+<div class="container">
+  <!--Movies on theathers-->
+  <section class="movies__container">
+    <div class="movie-item" *ngFor="let model of films | async">
+      <div class="poster">
+        <a
+          [routerLink]="'/films/' + model.id"
+          [title]="'Go to ' + model.title"
+        >
+          <img
+            class="poster__image"
+            loading="lazy"
+            [src]="'../../../assets/images/' + getPosterPath(model?.posterPath)"
+            [alt]="model.title"            
+          />
+        </a>
+
+        <div class="poster__content">
+          <a
+            *ngIf="model.title"
+            [routerLink]="'/films/' + model.id"
+            [title]="model.title"
+            class="poster__title colored-hover"
+          >
+            {{ model.title }}
+          </a>
+          <p *ngIf="model['created']">
+            {{ model["created"] | date }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,40 @@
+<div class="padding-top-60 container" style="display: flex">
+  <div style="width: 25%">
+    <mat-card class="actor-card">
+      <img src="../../../assets/images/1.jpg" />
+    </mat-card>
+  </div>
+
+  <div style="width: 70%">
+    <mat-card class="actor-card-bio" style="width: 100%; margin-bottom: 0">
+      <mat-card-content>
+        <h2>Personal Info</h2>
+        <p>
+          <strong>Name: </strong>
+          <span>{{ person.name }}</span>
+        </p>
+        <p>
+          <strong>DOB: </strong>
+          <span>{{ person.dob }}</span>
+        </p>
+        <p>
+          <strong>Email: </strong>
+          <span>{{ person.email }}</span>
+        </p>
+        <p>
+          <strong>Gender: </strong>
+          <span>{{ person.gender }}</span>
+        </p>
+        <p>
+            <strong>Birthday: </strong> {{ person.dob }}
+        </p>
+        <p>
+            <strong>Films: </strong>
+            <span>
+                <app-tag [isMovie]="true" [tags]="tags | async"></app-tag>
+            </span> 
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

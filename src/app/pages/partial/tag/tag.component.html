@@ -1,0 +1,2 @@
+<button class="m-5" (click)="gotoFilmDetails(tag.id)" *ngFor="let tag of tags" mat-raised-button color="primary" aria-label="tag">
+  {{tag?.title ?? tag?.name}}</button>
