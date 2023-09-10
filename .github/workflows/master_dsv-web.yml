@@ -23,10 +23,10 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install -g @angular/cli
-          npm install --legacy-peer-deps
-          ng build --configuration production
-          
+          npm install
+          npm run build --if-present
+          npm run test --if-present
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'dsv-web'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1031F81D053C4F7E832C277A28960240 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3815EF977C5F4782B69B59F4D6404295 }}
           package: .
